@@ -84,7 +84,9 @@ break_caesar(){ #message, type, l, WORDS
 
 main(){
 
-    vals=$(break_caesar $1 $2 $3 $4) # 1-text (input text) \ 2-type (%, x) \ 3-l (condition: 100 words, 0.8 %) \ 4-WORDS (language wordlist)
+    wordlist=$(cat $4)
+
+    vals=$(break_caesar $1 $2 $3 $wordlist) # 1-text (input text) \ 2-type (%, x) \ 3-l (condition: 100 words, 0.8 %) \ 4-WORDS (language wordlist)
 
     key="${vals[0]}"
     text="${vals[1]}"

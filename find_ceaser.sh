@@ -21,7 +21,8 @@ decrypt(){ #message, key
     for l in "${$message^^}"; do
         if containsElement "${$l^^}" "${alpha[@]}"; then #if the letter is actually a letter
             #find the corresponding ciphertext letter in the alphabet
-            result="$result$(alpha[($(getIndex $alpha $l) - $key) % ${#alpha[@]}])"
+            i=${($(getIndex $alpha $l) - $key) % ${#alpha[@]}}
+            result="$result$(alpha[$i])"
         else
             result=$result $l
         fi

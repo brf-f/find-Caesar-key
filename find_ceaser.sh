@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 getIndex(){ #arr, val
@@ -76,7 +78,7 @@ break_caesar(){ #message, type, l, WORDS
         done
     done
 
-    [[ $type = "x" ]] && r_val=$(getIndex max(realWords) $realWords) || r_val=$shift
+    [[ "$type" == "x" ]] && r_val=$(getIndex "${realWords[@]}") || r_val=$shift
 
     echo  $r_val # the most likely shift value as an integer |
 }

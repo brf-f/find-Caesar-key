@@ -19,7 +19,7 @@ def break_caesar(message):
     # wordlist WORDS
     shift = -1
     realWords = []
-    total = 100
+    total = 26
     
     for c in range(total):
         shift+=1

@@ -96,3 +96,5 @@ main(){
 # Args to add: | keys to ignore
 # ARGs: | input-text | first-match percentage (%) / best-match tries (x) | condition (100 words, 0.8 %)  | language wordlist
 main "$1" "$2" "$3" "$4"
+
+# REMOVE BEST MATCH TRIES (should be 26/ anything over is repeating)
